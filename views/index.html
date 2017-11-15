@@ -192,6 +192,10 @@
             $scope.message = '';
 
             // get username from sessionStorage or else generate one for me
+			if(!$window.sessionStorage.getItem('username')){
+			   $window.location.href="/";
+			   return;
+			}
             $scope.username = $window.sessionStorage.getItem('username') || chance.first();
 
             // save the username into sessionStorage

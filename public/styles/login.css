@@ -9,7 +9,9 @@
    ##################################################################### */
    
 @import url(http://fonts.googleapis.com/css?family=Roboto);
-
+body{
+	background: #fff;
+}
 * {
     font-family: 'Roboto', sans-serif;
 }
@@ -20,6 +22,11 @@
 
 #login-modal input[type=text], input[type=password] {
 	margin-top: 10px;
+	border-radius: 0px;
+    border-color: #C6967B;
+    border-width: 1px;
+    border-style: Solid;
+	
 }
 
 #div-login-msg,
@@ -84,7 +91,7 @@
 }
 
 .modal-content {
-    background-color: #ececec;
+    background-color: #fff;
     border: 1px solid #bdc3c7;
     border-radius: 0px;
     outline: 0;
@@ -126,6 +133,8 @@
 
 .btn-lg, .btn-group-lg>.btn {
     border-radius: 0px;
+    background-color: #dd592d;
+    color: #fff;
 }
 
 .btn-link {

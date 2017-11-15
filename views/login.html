@@ -12,13 +12,12 @@
   crossorigin="anonymous"></script>	
 </head>
 <body>
-
 <!-- BEGIN # MODAL LOGIN -->
 <div id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
     	<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header" align="center">
-					<img class="img-circle" id="img_logo" src="http://bootsnipp.com/img/logo.jpg">
+					<img  id="img_logo" src="./images/pwclogo.gif">
 
 				</div>
                 
@@ -42,7 +41,7 @@
         		    	</div>
 				        <div class="modal-footer">
                             <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+                                <button type="submit" class="btn  btn-lg btn-block">Login</button>
                             </div>
 				    	    <div>
                                 <!--button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
@@ -132,7 +131,10 @@ $(function() {
                 if ($lg_username == $lg_password) {
                     /*msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "error", "glyphicon-remove", "Login error");*/
 					window.sessionStorage.setItem('username', $lg_username);
-					window.location.href = "/connect";
+					
+					/*window.open("http://localhost:3000/?publicKey=487749ada6a94a38bfd59c7d58f578fd", "MsgWindow", "width=500,height=600");*/
+					//window.parent.close();
+					window.location.href = "/connect?publicKey=487749ada6a94a38bfd59c7d58f578fd";
                 } else {
                     /*msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Login OK");*/
 					msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "error", "glyphicon-remove", "Login error");
